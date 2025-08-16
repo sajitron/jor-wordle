@@ -12,7 +12,7 @@ export const Guess = ({ guess, answer }: GuessProps) => {
   return (
     <p className="guess">
       {range(5).map((num) => {
-        const char = checkedWord[num];
+        const char = checkedWord?.[num];
         return (
           <span key={num} className={`cell ${char ? char.status : undefined}`}>
             {char ? char.letter : undefined}
