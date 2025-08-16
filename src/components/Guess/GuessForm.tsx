@@ -28,6 +28,7 @@ export const GuessForm = ({ onGuess, gameStatus }: GuessFormProps) => {
         value={guess}
         pattern="[a-zA-Z]{5}"
         title="Please enter a 5-letter character"
+        onChange={(e) => setGuess(e.target.value.toUpperCase())}
       />
     </form>
   );
