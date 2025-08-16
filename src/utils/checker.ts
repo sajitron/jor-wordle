@@ -15,7 +15,7 @@ export const checkGuess = (
 
   if (!guess) return null;
 
-  const answerChars = answer.toUpperCase().split("");
+  const answerChars = answer.split("");
   const guessChars = guess.split("");
 
   const result: Record<number, ParsedGuess> = {};
