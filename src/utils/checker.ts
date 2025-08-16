@@ -9,11 +9,13 @@ export const checkGuess = (
   /** The correct answer */
   answer: string,
   /** The user's guess */
-  guess: string
-): Record<number, ParsedGuess> => {
+  guess?: string
+): Record<number, ParsedGuess> | null => {
   const SOLVED_CHAR = "✅";
 
-  const answerChars = answer.split("");
+  if (!guess) return null;
+
+  const answerChars = answer.toUpperCase().split("");
   const guessChars = guess.split("");
 
   const result: Record<number, ParsedGuess> = {};
