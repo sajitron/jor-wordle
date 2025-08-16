@@ -1,8 +1,10 @@
+import { Game } from "#components/Game/index.tsx";
+
 function App() {
   return (
     <>
       <h1>WORDLE</h1>
-      <p>Building a wordle clone</p>
+      <Game />
     </>
   );
 }
